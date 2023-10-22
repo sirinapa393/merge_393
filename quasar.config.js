@@ -13,6 +13,7 @@ const { configure } = require('quasar/wrappers');
 
 module.exports = configure(function (ctx) {
   return {
+    
     // https://v2.quasar.dev/quasar-cli-webpack/supporting-ts
     supportTS: false,
 
@@ -217,7 +218,11 @@ module.exports = configure(function (ctx) {
 
       
       chainWebpackPreload (/* chain */) {},
-      
+      framework: {
+        plugins: [
+          'Notify'
+        ],
+      }
     }
   }
 });
